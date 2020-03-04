@@ -43,5 +43,15 @@ namespace conversor_y_mas
             lblresul.Text = "?";
             txtcantidad.Text = "1";
         }
+
+        private void cmbde_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

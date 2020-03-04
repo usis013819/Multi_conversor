@@ -75,6 +75,7 @@
             this.txtcantidad.Name = "txtcantidad";
             this.txtcantidad.Size = new System.Drawing.Size(100, 25);
             this.txtcantidad.TabIndex = 2;
+            this.txtcantidad.TextChanged += new System.EventHandler(this.txtcantidad_TextChanged);
             // 
             // label2
             // 
@@ -96,6 +97,7 @@
             this.cmbde.Name = "cmbde";
             this.cmbde.Size = new System.Drawing.Size(118, 22);
             this.cmbde.TabIndex = 5;
+            this.cmbde.SelectedIndexChanged += new System.EventHandler(this.cmbde_SelectedIndexChanged);
             // 
             // cmba
             // 
