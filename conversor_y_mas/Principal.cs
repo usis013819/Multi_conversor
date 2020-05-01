@@ -60,5 +60,24 @@ namespace conversor_y_mas
             frmCliente.MdiParent = this;
             frmCliente.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Alquiler frmalquiler = new Alquiler();
+            frmalquiler.MdiParent = this;
+            frmalquiler.Show();
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnalquilermenu_Click(object sender, EventArgs e)
+        {
+            Alquiler frmalquiler = new Alquiler();
+            frmalquiler.MdiParent = this;
+            frmalquiler.Show();
+        }
     }
 }

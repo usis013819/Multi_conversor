@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelboton1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnalquilermenu = new System.Windows.Forms.Button();
             this.btnclientemenu = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnsalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelboton1.SuspendLayout();
@@ -80,12 +81,22 @@
             this.panel1.Size = new System.Drawing.Size(205, 810);
             this.panel1.TabIndex = 12;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 26);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Bienvenido";
+            // 
             // panelboton1
             // 
             this.panelboton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panelboton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelboton1.Controls.Add(this.pictureBox4);
-            this.panelboton1.Controls.Add(this.button4);
+            this.panelboton1.Controls.Add(this.btnalquilermenu);
             this.panelboton1.Controls.Add(this.btnclientemenu);
             this.panelboton1.Controls.Add(this.pictureBox5);
             this.panelboton1.Controls.Add(this.button6);
@@ -106,16 +117,17 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             // 
-            // button4
+            // btnalquilermenu
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(67, 441);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 35);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "ALQUILER";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnalquilermenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnalquilermenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnalquilermenu.Location = new System.Drawing.Point(67, 441);
+            this.btnalquilermenu.Name = "btnalquilermenu";
+            this.btnalquilermenu.Size = new System.Drawing.Size(121, 35);
+            this.btnalquilermenu.TabIndex = 8;
+            this.btnalquilermenu.Text = "ALQUILER";
+            this.btnalquilermenu.UseVisualStyleBackColor = true;
+            this.btnalquilermenu.Click += new System.EventHandler(this.btnalquilermenu_Click);
             // 
             // btnclientemenu
             // 
@@ -238,6 +250,7 @@
             this.button2.Text = "ALQUILER";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -256,21 +269,24 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label1
+            // btnsalir
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 26);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Bienvenido";
+            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
+            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsalir.Location = new System.Drawing.Point(220, 267);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(66, 57);
+            this.btnsalir.TabIndex = 27;
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 810);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -303,7 +319,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelboton1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnalquilermenu;
         private System.Windows.Forms.Button btnclientemenu;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button6;
@@ -316,5 +332,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnsalir;
     }
 }
