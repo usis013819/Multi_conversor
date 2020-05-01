@@ -21,5 +21,10 @@ namespace conversor_y_mas
         {
             Close();
         }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
