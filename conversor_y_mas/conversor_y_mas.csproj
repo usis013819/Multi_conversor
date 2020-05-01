@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busqueda_Alquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda_Alquiler.Designer.cs">
+      <DependentUpon>Busqueda_Alquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="opconversor.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Busqueda_Alquiler.resx">
+      <DependentUpon>Busqueda_Alquiler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
