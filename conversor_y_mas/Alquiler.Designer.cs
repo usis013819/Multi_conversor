@@ -102,7 +102,7 @@
             this.GrbDatosAlquiler.Margin = new System.Windows.Forms.Padding(1);
             this.GrbDatosAlquiler.Name = "GrbDatosAlquiler";
             this.GrbDatosAlquiler.Padding = new System.Windows.Forms.Padding(1);
-            this.GrbDatosAlquiler.Size = new System.Drawing.Size(658, 280);
+            this.GrbDatosAlquiler.Size = new System.Drawing.Size(639, 280);
             this.GrbDatosAlquiler.TabIndex = 28;
             this.GrbDatosAlquiler.TabStop = false;
             this.GrbDatosAlquiler.Text = "DATOS DE ALQUILER";
@@ -152,6 +152,7 @@
             this.BtnBuscarPelicula.Size = new System.Drawing.Size(47, 21);
             this.BtnBuscarPelicula.TabIndex = 30;
             this.BtnBuscarPelicula.UseVisualStyleBackColor = true;
+            this.BtnBuscarPelicula.Click += new System.EventHandler(this.BtnBuscarPelicula_Click);
             // 
             // CboPelicula
             // 
@@ -193,6 +194,7 @@
             this.BtnBuscarCliente.Size = new System.Drawing.Size(47, 21);
             this.BtnBuscarCliente.TabIndex = 26;
             this.BtnBuscarCliente.UseVisualStyleBackColor = true;
+            this.BtnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click);
             // 
             // TxtValor
             // 
@@ -533,7 +535,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(662, 508);
+            this.ClientSize = new System.Drawing.Size(640, 508);
             this.Controls.Add(this.GrbCliente);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.GrbNavegacion);

@@ -58,10 +58,10 @@ namespace conversor_y_mas
             miAdaptadorDatos.Fill(ds, "alquiler_clientes");
 
 
-
-
             return ds;
         }
+
+
         public void mantenimiento_datos_alquiler(String[] datos, String accion)
         {
             String sql = "";
@@ -96,6 +96,8 @@ namespace conversor_y_mas
 
             procesarSQL(sql);
         }
+
+
         public void mantenimiento_datos_PELICULAS(String[] datos, String accion)
         {
             String sql = "";
@@ -130,6 +132,43 @@ namespace conversor_y_mas
             else if (accion == "eliminar")
             {
                 sql = "DELETE peliculas FROM peliculas WHERE IdPelicula='" + datos[0] + "'";
+
+            }
+            procesarSQL(sql);
+        }
+
+
+        public void mantenimiento_datos_Cliente(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO clientes (nombre, direccion, telefono, dui) VALUES(" +
+
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'" +
+                    ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE clientes SET " +
+                " nombre              = '" + datos[1] + "'," +
+                " direccion           = '" + datos[2] + "'," +
+                " telefono            = '" + datos[3] + "'," +
+                " dui                 = '" + datos[4] + "'" +
+                " WHERE IdCliente     = '" + datos[0] + "'";
+
+
+            }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE clientes FROM clientes WHERE IdCliente='" + datos[0] + "'";
 
             }
             procesarSQL(sql);

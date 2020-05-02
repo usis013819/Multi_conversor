@@ -14,6 +14,7 @@ namespace conversor_y_mas
     {
         Clase_Parcial objConexion = new Clase_Parcial();
         public int _IdPelicula;
+
         public Buscador_Peliculas()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace conversor_y_mas
             }
             else
             {
-                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de PEÑICULAS",
+                MessageBox.Show("NO hay datos que seleccionar", "Busqueda de PELICULAS",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -41,7 +42,7 @@ namespace conversor_y_mas
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedarPeliculas.DataSource;
-            bs.Filter = "(genero+ duracion + IdPelicula) like '%" + valor + "%'";
+            bs.Filter = "(descripcion + sinopsis + duracion + genero) like '%" + valor + "%'";
             GrdBusquedarPeliculas.DataSource = bs;
         }
 

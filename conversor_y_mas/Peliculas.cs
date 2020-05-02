@@ -35,7 +35,7 @@ namespace conversor_y_mas
         {
             try
             {
-                txtcodigo.Text = tbl.Rows[posicion].ItemArray[0].ToString();
+                lblidpelicula.Text = tbl.Rows[posicion].ItemArray[0].ToString();
                 TxtDescripcion.Text = tbl.Rows[posicion].ItemArray[1].ToString();
                 txtSinopsis.Text = tbl.Rows[posicion].ItemArray[2].ToString();
                 txtGenero.Text = tbl.Rows[posicion].ItemArray[3].ToString();
@@ -104,9 +104,6 @@ namespace conversor_y_mas
             txtGenero.Text = "";
             txtTiempo.Text = "";
 
-
-
-
         }
 
         void controles(Boolean valor)
@@ -132,13 +129,11 @@ namespace conversor_y_mas
             { //boton de guardar
                 String[] valores = {
 
-              txtcodigo.Text,
+             lblidpelicula.Text,
              TxtDescripcion . Text ,
-              txtSinopsis .Text,
-                txtGenero .Text,
-              txtTiempo.Text,
-
-
+             txtSinopsis .Text,
+             txtGenero .Text,
+             txtTiempo.Text,
 
 
                 };
@@ -181,10 +176,10 @@ namespace conversor_y_mas
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de eliminar a " + txtcodigo.Text, "Registro de PELICULAS",
+            if (MessageBox.Show("Esta seguro de eliminar a " + TxtDescripcion.Text, "Registro de PELICULAS",
                          MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
             {
-                String[] valores = { txtcodigo.Text };
+                String[] valores = { lblidpelicula.Text };
                 objConexion.mantenimiento_datos_PELICULAS(valores, "eliminar");
 
                 actualizarDs();

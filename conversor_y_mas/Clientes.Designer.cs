@@ -45,10 +45,6 @@
             this.lblidcliente = new System.Windows.Forms.Label();
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtnit = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.lblidcl = new System.Windows.Forms.Label();
@@ -110,6 +106,7 @@
             this.BtnNuevo.Size = new System.Drawing.Size(67, 57);
             this.BtnNuevo.TabIndex = 4;
             this.BtnNuevo.UseVisualStyleBackColor = false;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // lblop
             // 
@@ -142,6 +139,7 @@
             this.BtnDelete.Size = new System.Drawing.Size(66, 57);
             this.BtnDelete.TabIndex = 6;
             this.BtnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnBuscar
             // 
@@ -153,6 +151,7 @@
             this.BtnBuscar.Size = new System.Drawing.Size(66, 57);
             this.BtnBuscar.TabIndex = 5;
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // lblop2
             // 
@@ -185,6 +184,7 @@
             this.BtnModificar.Size = new System.Drawing.Size(66, 57);
             this.BtnModificar.TabIndex = 5;
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // label4
             // 
@@ -215,10 +215,6 @@
             this.GrbDatosCliente.Controls.Add(this.lblidcliente);
             this.GrbDatosCliente.Controls.Add(this.txttelefono);
             this.GrbDatosCliente.Controls.Add(this.label8);
-            this.GrbDatosCliente.Controls.Add(this.txtnit);
-            this.GrbDatosCliente.Controls.Add(this.label7);
-            this.GrbDatosCliente.Controls.Add(this.label6);
-            this.GrbDatosCliente.Controls.Add(this.txtcodigo);
             this.GrbDatosCliente.Controls.Add(this.pictureBox1);
             this.GrbDatosCliente.Controls.Add(this.TxtDireccion);
             this.GrbDatosCliente.Controls.Add(this.lblidcl);
@@ -240,14 +236,14 @@
             // 
             this.lblidcliente.AutoSize = true;
             this.lblidcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidcliente.Location = new System.Drawing.Point(236, 54);
+            this.lblidcliente.Location = new System.Drawing.Point(362, 47);
             this.lblidcliente.Name = "lblidcliente";
             this.lblidcliente.Size = new System.Drawing.Size(0, 13);
             this.lblidcliente.TabIndex = 17;
             // 
             // txttelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(234, 318);
+            this.txttelefono.Location = new System.Drawing.Point(234, 280);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(100, 20);
             this.txttelefono.TabIndex = 16;
@@ -256,45 +252,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(139, 321);
+            this.label8.Location = new System.Drawing.Point(139, 283);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "TELEFONO:";
-            // 
-            // txtnit
-            // 
-            this.txtnit.Location = new System.Drawing.Point(234, 259);
-            this.txtnit.Name = "txtnit";
-            this.txtnit.Size = new System.Drawing.Size(135, 20);
-            this.txtnit.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(183, 262);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "NIT:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(324, 54);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "CODIGO:";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.Location = new System.Drawing.Point(401, 51);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtcodigo.TabIndex = 12;
             // 
             // pictureBox1
             // 
@@ -309,7 +271,7 @@
             // 
             // TxtDireccion
             // 
-            this.TxtDireccion.Location = new System.Drawing.Point(234, 376);
+            this.TxtDireccion.Location = new System.Drawing.Point(234, 191);
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.Size = new System.Drawing.Size(282, 39);
@@ -319,7 +281,7 @@
             // 
             this.lblidcl.AutoSize = true;
             this.lblidcl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidcl.Location = new System.Drawing.Point(137, 54);
+            this.lblidcl.Location = new System.Drawing.Point(263, 47);
             this.lblidcl.Name = "lblidcl";
             this.lblidcl.Size = new System.Drawing.Size(80, 13);
             this.lblidcl.TabIndex = 1;
@@ -339,7 +301,7 @@
             // 
             this.LblDireccion.AutoSize = true;
             this.LblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDireccion.Location = new System.Drawing.Point(136, 379);
+            this.LblDireccion.Location = new System.Drawing.Point(136, 194);
             this.LblDireccion.Name = "LblDireccion";
             this.LblDireccion.Size = new System.Drawing.Size(79, 13);
             this.LblDireccion.TabIndex = 7;
@@ -354,7 +316,7 @@
             // 
             // txtdui
             // 
-            this.txtdui.Location = new System.Drawing.Point(234, 194);
+            this.txtdui.Location = new System.Drawing.Point(234, 360);
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(100, 20);
             this.txtdui.TabIndex = 6;
@@ -363,7 +325,7 @@
             // 
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmail.Location = new System.Drawing.Point(182, 197);
+            this.LblEmail.Location = new System.Drawing.Point(182, 363);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(33, 13);
             this.LblEmail.TabIndex = 5;
@@ -416,6 +378,7 @@
             this.BtnAnterior.Size = new System.Drawing.Size(56, 46);
             this.BtnAnterior.TabIndex = 1;
             this.BtnAnterior.UseVisualStyleBackColor = false;
+            this.BtnAnterior.Click += new System.EventHandler(this.BtnAnterior_Click);
             // 
             // BtnPrimero
             // 
@@ -428,6 +391,7 @@
             this.BtnPrimero.Size = new System.Drawing.Size(56, 46);
             this.BtnPrimero.TabIndex = 0;
             this.BtnPrimero.UseVisualStyleBackColor = false;
+            this.BtnPrimero.Click += new System.EventHandler(this.BtnPrimero_Click);
             // 
             // BtnSiguiente
             // 
@@ -440,6 +404,7 @@
             this.BtnSiguiente.Size = new System.Drawing.Size(56, 46);
             this.BtnSiguiente.TabIndex = 2;
             this.BtnSiguiente.UseVisualStyleBackColor = false;
+            this.BtnSiguiente.Click += new System.EventHandler(this.BtnSiguiente_Click);
             // 
             // BtnUltimo
             // 
@@ -452,6 +417,7 @@
             this.BtnUltimo.Size = new System.Drawing.Size(56, 46);
             this.BtnUltimo.TabIndex = 3;
             this.BtnUltimo.UseVisualStyleBackColor = false;
+            this.BtnUltimo.Click += new System.EventHandler(this.BtnUltimo_Click);
             // 
             // Clientes
             // 
@@ -469,6 +435,7 @@
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Clientes_Load);
             this.grbcliente.ResumeLayout(false);
             this.grbcliente.PerformLayout();
             this.GrbDatosCliente.ResumeLayout(false);
@@ -499,10 +466,6 @@
         private System.Windows.Forms.Label lblidcliente;
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtnit;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label lblidcl;

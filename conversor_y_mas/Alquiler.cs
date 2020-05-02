@@ -216,5 +216,29 @@ namespace conversor_y_mas
         {
             Close();
         }
+
+        private void BtnBuscarCliente_Click(object sender, EventArgs e)
+        {
+
+            Busqueda_Clientes buscarcliente = new Busqueda_Clientes();
+            buscarcliente.ShowDialog();
+
+            if (buscarcliente._IdCliente > 0)
+            {
+                CboClientes.SelectedValue = buscarcliente._IdCliente;
+            }
+        }
+
+        private void BtnBuscarPelicula_Click(object sender, EventArgs e)
+        {
+            Buscador_Peliculas frmBusqueda = new Buscador_Peliculas();
+            frmBusqueda.ShowDialog();
+
+            if (frmBusqueda._IdPelicula > 0)
+            {
+                posicion = tbl.Rows.IndexOf(tbl.Rows.Find(frmBusqueda._IdPelicula));
+                mostrarDatos();
+            }
+        }
     }
 }

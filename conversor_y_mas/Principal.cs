@@ -79,5 +79,19 @@ namespace conversor_y_mas
             frmalquiler.MdiParent = this;
             frmalquiler.Show();
         }
+
+        private void btnpelicula_Click(object sender, EventArgs e)
+        {
+            Peliculas frmpeliculas = new Peliculas();
+            frmpeliculas.MdiParent = this;
+            frmpeliculas.Show();
+        }
+
+        private void btnmenupeliculas_Click(object sender, EventArgs e)
+        {
+            Peliculas frmpeliculas = new Peliculas();
+            frmpeliculas.MdiParent = this;
+            frmpeliculas.Show();
+        }
     }
 }
