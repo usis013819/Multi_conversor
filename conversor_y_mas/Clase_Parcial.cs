@@ -96,6 +96,44 @@ namespace conversor_y_mas
 
             procesarSQL(sql);
         }
+        public void mantenimiento_datos_PELICULAS(String[] datos, String accion)
+        {
+            String sql = "";
+            if (accion == "nuevo")
+            {
+
+                sql = "INSERT INTO peliculas (descripcion, sinopsis, genero, duracion) VALUES(" +
+
+                    "'" + datos[1] + "'," +
+                    "'" + datos[2] + "'," +
+                    "'" + datos[3] + "'," +
+                    "'" + datos[4] + "'" +
+                    ")";
+
+            }
+
+            else if (accion == "modificar")
+            {
+
+                sql = "UPDATE peliculas SET " +
+                " descripcion            = '" + datos[1] + "'," +
+                " sinopsis               = '" + datos[2] + "'," +
+                " genero                 = '" + datos[3] + "'," +
+                " duracion               = '" + datos[4] + "'" +
+                "WHERE IdPelicula         = '" + datos[0] + "'";
+
+
+
+
+
+            }
+            else if (accion == "eliminar")
+            {
+                sql = "DELETE peliculas FROM peliculas WHERE IdPelicula='" + datos[0] + "'";
+
+            }
+            procesarSQL(sql);
+        }
 
         void procesarSQL(String sql)
         {

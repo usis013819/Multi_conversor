@@ -67,6 +67,12 @@
     <Compile Include="Alquiler.Designer.cs">
       <DependentUpon>Alquiler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Buscador_Peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscador_Peliculas.Designer.cs">
+      <DependentUpon>Buscador_Peliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busqueda_Alquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Peliculas.Designer.cs">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +103,17 @@
     <EmbeddedResource Include="Alquiler.resx">
       <DependentUpon>Alquiler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Buscador_Peliculas.resx">
+      <DependentUpon>Buscador_Peliculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busqueda_Alquiler.resx">
       <DependentUpon>Busqueda_Alquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Peliculas.resx">
+      <DependentUpon>Peliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
