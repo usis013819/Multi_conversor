@@ -41,12 +41,16 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnmenu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnpelicula = new System.Windows.Forms.Button();
             this.btnalquiler = new System.Windows.Forms.Button();
             this.btncliente = new System.Windows.Forms.Button();
-            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnsubmenu1 = new System.Windows.Forms.Button();
+            this.btnsubmenu2 = new System.Windows.Forms.Button();
+            this.panelitem1 = new System.Windows.Forms.Panel();
+            this.panelitem2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelboton1.SuspendLayout();
@@ -56,15 +60,18 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelitem1.SuspendLayout();
+            this.panelitem2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(49, 3);
+            this.pictureBox6.Location = new System.Drawing.Point(41, 3);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(105, 83);
+            this.pictureBox6.Size = new System.Drawing.Size(113, 103);
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
@@ -72,6 +79,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.panelboton1);
@@ -87,8 +95,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(33, 156);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(36, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 26);
             this.label1.TabIndex = 10;
@@ -96,17 +104,16 @@
             // 
             // panelboton1
             // 
-            this.panelboton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelboton1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelboton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelboton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelboton1.Controls.Add(this.pictureBox4);
-            this.panelboton1.Controls.Add(this.btnalquilermenu);
-            this.panelboton1.Controls.Add(this.btnclientemenu);
-            this.panelboton1.Controls.Add(this.pictureBox5);
-            this.panelboton1.Controls.Add(this.btnmenupeliculas);
-            this.panelboton1.Controls.Add(this.pictureBox7);
+            this.panelboton1.Controls.Add(this.panelitem2);
+            this.panelboton1.Controls.Add(this.panelitem1);
+            this.panelboton1.Controls.Add(this.btnsubmenu2);
+            this.panelboton1.Controls.Add(this.btnsubmenu1);
             this.panelboton1.Location = new System.Drawing.Point(2, 240);
             this.panelboton1.Name = "panelboton1";
-            this.panelboton1.Size = new System.Drawing.Size(200, 567);
+            this.panelboton1.Size = new System.Drawing.Size(200, 539);
             this.panelboton1.TabIndex = 5;
             // 
             // pictureBox4
@@ -114,7 +121,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 441);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 22);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(53, 52);
             this.pictureBox4.TabIndex = 9;
@@ -122,22 +129,23 @@
             // 
             // btnalquilermenu
             // 
+            this.btnalquilermenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnalquilermenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnalquilermenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnalquilermenu.Location = new System.Drawing.Point(67, 441);
+            this.btnalquilermenu.Location = new System.Drawing.Point(58, 22);
             this.btnalquilermenu.Name = "btnalquilermenu";
             this.btnalquilermenu.Size = new System.Drawing.Size(121, 35);
             this.btnalquilermenu.TabIndex = 8;
             this.btnalquilermenu.Text = "ALQUILER";
-            this.btnalquilermenu.UseVisualStyleBackColor = true;
+            this.btnalquilermenu.UseVisualStyleBackColor = false;
             this.btnalquilermenu.Click += new System.EventHandler(this.btnalquilermenu_Click);
             // 
             // btnclientemenu
             // 
-            this.btnclientemenu.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnclientemenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnclientemenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnclientemenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclientemenu.Location = new System.Drawing.Point(67, 48);
+            this.btnclientemenu.Location = new System.Drawing.Point(58, 35);
             this.btnclientemenu.Name = "btnclientemenu";
             this.btnclientemenu.Size = new System.Drawing.Size(121, 35);
             this.btnclientemenu.TabIndex = 3;
@@ -150,7 +158,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 227);
+            this.pictureBox5.Location = new System.Drawing.Point(2, 108);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(53, 51);
             this.pictureBox5.TabIndex = 7;
@@ -161,7 +169,7 @@
             this.btnmenupeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnmenupeliculas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnmenupeliculas.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmenupeliculas.Location = new System.Drawing.Point(67, 234);
+            this.btnmenupeliculas.Location = new System.Drawing.Point(57, 115);
             this.btnmenupeliculas.Name = "btnmenupeliculas";
             this.btnmenupeliculas.Size = new System.Drawing.Size(121, 35);
             this.btnmenupeliculas.TabIndex = 4;
@@ -174,7 +182,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 41);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 28);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(53, 51);
             this.pictureBox7.TabIndex = 6;
@@ -183,9 +191,12 @@
             // btnmenu
             // 
             this.btnmenu.AutoEllipsis = true;
-            this.btnmenu.BackColor = System.Drawing.Color.White;
+            this.btnmenu.BackColor = System.Drawing.Color.Black;
             this.btnmenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnmenu.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenu.ForeColor = System.Drawing.Color.White;
+            this.btnmenu.Image = ((System.Drawing.Image)(resources.GetObject("btnmenu.Image")));
+            this.btnmenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmenu.Location = new System.Drawing.Point(2, 205);
             this.btnmenu.Name = "btnmenu";
             this.btnmenu.Size = new System.Drawing.Size(200, 35);
@@ -204,8 +215,21 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(205, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1049, 60);
+            this.panel3.Size = new System.Drawing.Size(1000, 60);
             this.panel3.TabIndex = 13;
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
+            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsalir.Location = new System.Drawing.Point(935, -1);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(70, 62);
+            this.btnsalir.TabIndex = 27;
+            this.btnsalir.UseVisualStyleBackColor = false;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // pictureBox1
             // 
@@ -230,66 +254,100 @@
             // 
             // btnpelicula
             // 
-            this.btnpelicula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnpelicula.BackColor = System.Drawing.Color.Transparent;
             this.btnpelicula.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnpelicula.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpelicula.Image = ((System.Drawing.Image)(resources.GetObject("btnpelicula.Image")));
-            this.btnpelicula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnpelicula.Location = new System.Drawing.Point(608, 66);
+            this.btnpelicula.Location = new System.Drawing.Point(990, 311);
             this.btnpelicula.Name = "btnpelicula";
-            this.btnpelicula.Size = new System.Drawing.Size(259, 187);
+            this.btnpelicula.Size = new System.Drawing.Size(205, 187);
             this.btnpelicula.TabIndex = 16;
-            this.btnpelicula.Text = "PELICULAS";
             this.btnpelicula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnpelicula.UseVisualStyleBackColor = false;
             this.btnpelicula.Click += new System.EventHandler(this.btnpelicula_Click);
             // 
             // btnalquiler
             // 
-            this.btnalquiler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnalquiler.BackColor = System.Drawing.Color.Transparent;
             this.btnalquiler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnalquiler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnalquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnalquiler.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnalquiler.Image = ((System.Drawing.Image)(resources.GetObject("btnalquiler.Image")));
             this.btnalquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnalquiler.Location = new System.Drawing.Point(934, 66);
+            this.btnalquiler.Location = new System.Drawing.Point(992, 86);
             this.btnalquiler.Name = "btnalquiler";
-            this.btnalquiler.Size = new System.Drawing.Size(299, 187);
+            this.btnalquiler.Size = new System.Drawing.Size(205, 187);
             this.btnalquiler.TabIndex = 15;
-            this.btnalquiler.Text = "ALQUILER";
-            this.btnalquiler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnalquiler.UseVisualStyleBackColor = false;
             this.btnalquiler.Click += new System.EventHandler(this.button2_Click);
             // 
             // btncliente
             // 
-            this.btncliente.BackColor = System.Drawing.Color.Aquamarine;
+            this.btncliente.BackColor = System.Drawing.Color.Transparent;
             this.btncliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btncliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncliente.Font = new System.Drawing.Font("Forte", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncliente.Image = ((System.Drawing.Image)(resources.GetObject("btncliente.Image")));
             this.btncliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncliente.Location = new System.Drawing.Point(227, 66);
+            this.btncliente.Location = new System.Drawing.Point(992, 535);
             this.btncliente.Name = "btncliente";
-            this.btncliente.Size = new System.Drawing.Size(294, 187);
+            this.btncliente.Size = new System.Drawing.Size(205, 187);
             this.btncliente.TabIndex = 14;
-            this.btncliente.Text = "CLIENTES";
             this.btncliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btncliente.UseVisualStyleBackColor = false;
             this.btncliente.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnsalir
+            // btnsubmenu1
             // 
-            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnsalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsalir.BackgroundImage")));
-            this.btnsalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnsalir.Location = new System.Drawing.Point(1008, -1);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(70, 62);
-            this.btnsalir.TabIndex = 27;
-            this.btnsalir.UseVisualStyleBackColor = false;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            this.btnsubmenu1.AutoEllipsis = true;
+            this.btnsubmenu1.BackColor = System.Drawing.Color.White;
+            this.btnsubmenu1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsubmenu1.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsubmenu1.Location = new System.Drawing.Point(8, 56);
+            this.btnsubmenu1.Name = "btnsubmenu1";
+            this.btnsubmenu1.Size = new System.Drawing.Size(182, 35);
+            this.btnsubmenu1.TabIndex = 18;
+            this.btnsubmenu1.Text = "BASICOS";
+            this.btnsubmenu1.UseVisualStyleBackColor = false;
+            this.btnsubmenu1.Click += new System.EventHandler(this.btnsubmenu1_Click);
+            // 
+            // btnsubmenu2
+            // 
+            this.btnsubmenu2.AutoEllipsis = true;
+            this.btnsubmenu2.BackColor = System.Drawing.Color.White;
+            this.btnsubmenu2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsubmenu2.Font = new System.Drawing.Font("Forte", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsubmenu2.Location = new System.Drawing.Point(8, 316);
+            this.btnsubmenu2.Name = "btnsubmenu2";
+            this.btnsubmenu2.Size = new System.Drawing.Size(182, 35);
+            this.btnsubmenu2.TabIndex = 19;
+            this.btnsubmenu2.Text = "INTERMEDIO";
+            this.btnsubmenu2.UseVisualStyleBackColor = false;
+            this.btnsubmenu2.Click += new System.EventHandler(this.btnsubmenu2_Click);
+            // 
+            // panelitem1
+            // 
+            this.panelitem1.BackColor = System.Drawing.Color.Aquamarine;
+            this.panelitem1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelitem1.BackgroundImage")));
+            this.panelitem1.Controls.Add(this.btnclientemenu);
+            this.panelitem1.Controls.Add(this.pictureBox7);
+            this.panelitem1.Controls.Add(this.btnmenupeliculas);
+            this.panelitem1.Controls.Add(this.pictureBox5);
+            this.panelitem1.Location = new System.Drawing.Point(8, 91);
+            this.panelitem1.Name = "panelitem1";
+            this.panelitem1.Size = new System.Drawing.Size(182, 186);
+            this.panelitem1.TabIndex = 18;
+            // 
+            // panelitem2
+            // 
+            this.panelitem2.BackColor = System.Drawing.Color.Aquamarine;
+            this.panelitem2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelitem2.BackgroundImage")));
+            this.panelitem2.Controls.Add(this.pictureBox4);
+            this.panelitem2.Controls.Add(this.btnalquilermenu);
+            this.panelitem2.Location = new System.Drawing.Point(8, 350);
+            this.panelitem2.Name = "panelitem2";
+            this.panelitem2.Size = new System.Drawing.Size(182, 114);
+            this.panelitem2.TabIndex = 19;
             // 
             // Principal
             // 
@@ -297,8 +355,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1254, 810);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1205, 810);
             this.Controls.Add(this.btnpelicula);
             this.Controls.Add(this.btnalquiler);
             this.Controls.Add(this.btncliente);
@@ -309,7 +367,7 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -321,6 +379,8 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelitem1.ResumeLayout(false);
+            this.panelitem2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -345,5 +405,9 @@
         private System.Windows.Forms.Button btncliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Panel panelitem2;
+        private System.Windows.Forms.Panel panelitem1;
+        private System.Windows.Forms.Button btnsubmenu2;
+        private System.Windows.Forms.Button btnsubmenu1;
     }
 }

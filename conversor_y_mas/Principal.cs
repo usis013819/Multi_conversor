@@ -33,18 +33,23 @@ namespace conversor_y_mas
 
             btnmenu.Location = new Point(2, 205);
             panelboton1.Location = new Point(2, 240);
-
+            
             if (panelboton1.Visible == false)
             {
                 btnmenu.Location = new Point(2, 205);
+                btnsubmenu1.Location = new Point(8, 56);
+                btnsubmenu2.Location = new Point(8, 316);
             }
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
             btnmenu.Location = new Point(2, 205);
+            btnsubmenu1.Location = new Point(8, 56);
+            btnsubmenu2.Location = new Point(8, 316);
             panelboton1.Hide();
-
+            panelitem1.Hide();
+            panelitem2.Hide();
         }
 
         private void btnclientemenu_Click(object sender, EventArgs e)
@@ -92,6 +97,54 @@ namespace conversor_y_mas
             Peliculas frmpeliculas = new Peliculas();
             frmpeliculas.MdiParent = this;
             frmpeliculas.Show();
+        }
+
+        private void btnsubmenu1_Click(object sender, EventArgs e)
+        {
+            if (panelitem1.Visible == true)
+            {
+                panelitem1.Visible = false;
+            }
+
+            else
+
+            {
+                panelitem1.Visible = true;
+            }
+
+            btnsubmenu1.Location = new Point(8, 56);
+            panelitem1.Location = new Point(8, 91);
+
+            if (panelitem1.Visible == false)
+            {
+                
+                btnsubmenu1.Location = new Point(8, 56);
+                btnsubmenu2.Location = new Point(8, 316);
+            }
+        }
+
+        private void btnsubmenu2_Click(object sender, EventArgs e)
+        {
+            if (panelitem2.Visible == true)
+            {
+                panelitem2.Visible = false;
+            }
+
+            else
+
+            {
+                panelitem2.Visible = true;
+            }
+
+            btnsubmenu2.Location = new Point(8, 316);
+            panelitem2.Location = new Point(8, 350);
+
+            if (panelitem2.Visible == false)
+            {
+
+                btnsubmenu1.Location = new Point(8, 56);
+                btnsubmenu2.Location = new Point(8, 316);
+            }
         }
     }
 }

@@ -107,6 +107,7 @@
             this.Controls.Add(this.BtnSeleccionar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Buscador_Peliculas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscador_Peliculas";
             this.Load += new System.EventHandler(this.Buscador_Peliculas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GrdBusquedarPeliculas)).EndInit();
