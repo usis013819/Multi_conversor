@@ -22,7 +22,8 @@ namespace conversor_y_mas
 
         private void Busqueda_Alquiler_Load(object sender, EventArgs e)
         {
-            GrdBusquedaAlquiler.DataSource = objConexion.obtener_datos().Tables["alquiler_clientes"].DefaultView;
+            GrdBusquedaAlquiler.DataSource = objConexion.obtener_datos().Tables["alquiler_clientes_peliculas"].DefaultView;
+           
         }
 
         private void BtnSeleccionar_Click(object sender, EventArgs e)
@@ -43,9 +44,7 @@ namespace conversor_y_mas
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = GrdBusquedaAlquiler.DataSource;
-            // bs.Filter = " where alquiler.valor like '%" +valor + "%' or clientes.nombre like '%" + valor + "%'";
-            bs.Filter = " nombre like '%" + valor + "%' or descripcion like '%" + valor + "%'";
-
+            bs.Filter = "nombre like '%" + valor + "%' or descripcion like '%" + valor + "%' or sinopsis like '%" + valor + "%'";
             GrdBusquedaAlquiler.DataSource = bs;
         }
 

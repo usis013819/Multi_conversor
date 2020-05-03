@@ -47,15 +47,14 @@ namespace conversor_y_mas
             miAdaptadorDatos.Fill(ds, "peliculas");
 
 
-
-            comandosSQL.CommandText = " select clientes.nombre, alquiler.IdAlquiler, alquiler.IdPelicula, convert(varchar(10),alquiler.fechaPrestamo, 120) fechaPrestamo," +
-                                          "convert(varchar(10),alquiler.fechaDevolucion, 120) fechaDevolucion, alquiler.valor ,peliculas.descripcion,peliculas.sinopsis " +
-                                          "from alquiler " +
-                                          "inner join clientes on(clientes.IdCliente = alquiler.IdClientes) " +
-                                          "inner join peliculas on(peliculas.IdPelicula = alquiler.IdPelicula)";
-
+     
+            comandosSQL.CommandText = " select clientes.nombre, alquiler.IdAlquiler, alquiler.IdPelicula, alquiler.fechaPrestamo,  alquiler.fechaDevolucion,  alquiler.valor," +
+                                      " peliculas.descripcion, peliculas.sinopsis " + 
+                                      " from alquiler " + 
+                                      " inner join clientes on(clientes.IdCliente = alquiler.IdClientes)" +
+                                      " inner join peliculas on(peliculas.IdPelicula = alquiler.IdPelicula)";
             miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(ds, "alquiler_clientes");
+            miAdaptadorDatos.Fill(ds, "alquiler_clientes_peliculas");
 
 
             return ds;
